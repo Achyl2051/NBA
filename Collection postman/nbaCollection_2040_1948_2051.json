@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "c297f7e1-3b44-427b-a2d3-0c6781d2cf6c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31304704",
+		"_collection_link": "https://www.postman.com/jonathandry/workspace/nba/collection/31304704-c297f7e1-3b44-427b-a2d3-0c6781d2cf6c?action=share&source=collection_link&creator=31304704"
+	},
+	"item": [
+		{
+			"name": "Creation Joueurs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nom",
+							"value": "Irving",
+							"type": "text"
+						},
+						{
+							"key": "numero",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "idTeam",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/player",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste joueurs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/players",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste Match",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/matchs",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"matchs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertion match",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/match?idTeam1&idTeam2&Date=21/11/2023",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"match"
+					],
+					"query": [
+						{
+							"key": "idTeam1",
+							"value": null
+						},
+						{
+							"key": "idTeam2",
+							"value": null
+						},
+						{
+							"key": "Date",
+							"value": "21/11/2023"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste tout les statistiques",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/statistiques",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"statistiques"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creation Statistique",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "idPlayer",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "idMatch",
+							"value": "52",
+							"type": "text"
+						},
+						{
+							"key": "idTypeStat",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/statistique",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"statistique"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste Equipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/teams",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertion equipes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/team?nom&diminutif",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"team"
+					],
+					"query": [
+						{
+							"key": "nom",
+							"value": null
+						},
+						{
+							"key": "diminutif",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Type Statistiques",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/typestats",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"typestats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Type Statistiques",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nom",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/typestat",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"typestat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statistiques Joueurs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nom",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/statbyjoueurs",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"statbyjoueurs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statistiques Equipes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nom",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nbaws-production.up.railway.app/statbyjoueurs",
+					"protocol": "https",
+					"host": [
+						"nbaws-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"statbyjoueurs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
