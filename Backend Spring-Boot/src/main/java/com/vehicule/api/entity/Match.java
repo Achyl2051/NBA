@@ -1,15 +1,13 @@
 package com.vehicule.api.entity;
 
 import jakarta.persistence.*;
-import java.util.Date;
 @Entity
 @Table
 public class Match {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @Column(nullable = false)
-    private Date date;
+    private String date;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_team1",referencedColumnName="id")
     private Team team1;
@@ -25,11 +23,11 @@ public class Match {
         this.id = id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date nom) {
+    public void setDate(String date) {
         this.date = date;
     }
 
